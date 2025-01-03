@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const puppeteer = require("puppeteer");
 const CONTENT_SELECTOR = "#page-content > div";
 const TITLE_SELECTOR = "#activity-name";
@@ -66,10 +68,10 @@ const autoScroll = async (page) => {
   const element = await page.$(CONTENT_SELECTOR);
   await element.evaluate((el) => (el.style.padding = "16px"));
 
-  const filePath = `${title}.png`;
+  const filePath = `${process.cwd()}/${title}.png`;
 
-  await element.screenshot({ path: `output/${title}.png` });
+  await element.screenshot({ path: filePath });
 
-  console.log(`\uD83C\uDF7B ${filePath} generated...`);
+  console.log(`\uD83C\uDF7B Saved at: ${filePath}`);
   await browser.close();
 })();
