@@ -1,18 +1,26 @@
 {
   "name": "wechat-article-dl",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "email": "sjtuwbh@gmail.com",
+    "name": "Cygra",
+    "url": "https://github.com/Cygra"
+  },
   "license": "ISC",
   "dependencies": {
     "puppeteer": "^13.7.0"
   },
   "bin": {
     "wx-dl": "index.js"
+  },
+  "repository": {
+    "url": "git@github.com:Cygra/wechat-article-dl.git",
+    "type": "git"
   }
 }
