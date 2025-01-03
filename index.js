@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
-const SELECTOR = "#page-content > div";
+const CONTENT_SELECTOR = "#page-content > div";
+const TITLE_SELECTOR = "#activity-name";
 
 const logProcess = (percent) => {
   const completed = Math.min(Math.floor(percent * 40), 40);
@@ -39,7 +40,7 @@ const autoScroll = async (page) => {
 (async () => {
   const browser = await puppeteer.launch();
 
-  console.log("\uD83D\uDCAAStarted!");
+  console.log("\uD83D\uDCAA Started...");
 
   const page = await browser.newPage();
   await page.goto(process.argv[2]);
@@ -51,19 +52,24 @@ const autoScroll = async (page) => {
     }
   });
 
-  console.log("\u26FDStart to generate!");
-
   await autoScroll(page);
 
-  await page.waitForSelector(SELECTOR);
+  await page.waitForSelector(CONTENT_SELECTOR);
 
-  const element = await page.$(SELECTOR);
+  const titleEle = await page.$(TITLE_SELECTOR);
+  const title = (
+    await page.evaluate((el) => el.textContent, titleEle)
+  ).replaceAll(/\s/g, "");
+
+  console.log(`\n\u26FD Start to download ${title}...`);
+
+  const element = await page.$(CONTENT_SELECTOR);
   await element.evaluate((el) => (el.style.padding = "16px"));
 
-  const filePath = `${await page.title()}.png`;
+  const filePath = `${title}.png`;
 
-  await element.screenshot({ path: `output/${await page.title()}.png` });
+  await element.screenshot({ path: `output/${title}.png` });
 
-  console.log(`\n\uD83C\uDF7B${filePath} generated!`);
+  console.log(`\uD83C\uDF7B ${filePath} generated...`);
   await browser.close();
 })();
