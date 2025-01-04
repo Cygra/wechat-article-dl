@@ -2,9 +2,11 @@
   "name": "wechat-article-dl",
   "version": "1.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --watch src -e ts --exec \"npm run build\""
   },
   "keywords": [],
   "author": {
@@ -14,7 +16,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^13.7.0"
+    "piexifjs": "^1.0.6",
+    "prompts": "^2.4.2",
+    "puppeteer": "^23.11.1"
   },
   "bin": {
     "wx-dl": "index.js"
@@ -22,5 +26,18 @@
   "repository": {
     "url": "git@github.com:Cygra/wechat-article-dl.git",
     "type": "git"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.9",
+    "nodemon": "^3.1.9",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
   }
 }
