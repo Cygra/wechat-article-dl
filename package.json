@@ -1,6 +1,6 @@
 {
   "name": "wechat-article-dl",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -16,7 +16,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "piexifjs": "^1.0.6",
     "prompts": "^2.4.2",
     "puppeteer": "^23.11.1"
   },

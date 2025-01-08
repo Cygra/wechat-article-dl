@@ -16,9 +16,19 @@ npm install -g wechat-article-dl
 wx-dl https://mp.weixin.qq.com/s/AnCv3WLmMGJPn5MAjqwC6g
 ```
 
-执行完成后，会生成 `[root]/[文章名].png`。
+执行完成后，会生成 `[root]/[公众号名]-[文章名].png`。
 
 ![example](./img/example.png)
+
+## 开发
+
+```sh
+# 文件发生改动时自动构建
+npm run watch
+
+# 编译
+npm run build
+```
 
 ## TODO
 

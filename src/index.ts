@@ -2,8 +2,6 @@
 
 import puppeteer, { Page } from "puppeteer";
 import prompts from "prompts";
-// import piexif from "piexifjs";
-// import { promises as fs } from "fs";
 
 const CONTENT_SELECTOR = "#page-content > div";
 const TITLE_SELECTOR = "#activity-name";
@@ -119,21 +117,6 @@ const autoScroll = async (page: Page) => {
     path: filePath,
     type: "jpeg",
   });
-
-  // var exifObj = {
-  //   Exif: {
-  //     37510: link,
-  //   },
-  // };
-
-  // const screenshot = await fs.readFile(filePath);
-
-  // var exifStr = piexif.dump(exifObj);
-  // const screenshotWithExif = piexif.insert(
-  //   exifStr,
-  //   "data:image/jpeg;base64," + screenshot.toString("base64")
-  // );
-  // await fs.writeFile(filePath, screenshotWithExif);
 
   console.log(`\uD83C\uDF7B 截图保存至：${filePath}`);
   await browser.close();
