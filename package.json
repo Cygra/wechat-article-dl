@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon --watch src -e ts --exec \"npm run build\""
+    "start": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": {
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@types/prompts": "^2.4.9",
     "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
