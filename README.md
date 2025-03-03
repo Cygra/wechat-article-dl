@@ -23,10 +23,10 @@ wx-dl https://mp.weixin.qq.com/s/AnCv3WLmMGJPn5MAjqwC6g
 ## 开发
 
 ```sh
-# 文件发生改动时自动构建
-npm run watch
+# 开发
+npm run start
 
-# 编译
+# 构建
 npm run build
 ```
 
