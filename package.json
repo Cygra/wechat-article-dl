@@ -1,6 +1,6 @@
 {
   "name": "wechat-article-dl",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -22,8 +22,11 @@
     "puppeteer": "^23.11.1"
   },
   "bin": {
-    "wx-dl": "index.js"
+    "wx-dl": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "url": "git@github.com:Cygra/wechat-article-dl.git",
     "type": "git"
