@@ -1,4 +1,3 @@
 node_modules
 dist
-
-/**.jpeg
+src/index.html
