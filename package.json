@@ -1,10 +1,10 @@
 {
   "name": "wechat-article-dl",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup",
+    "build": "npm run build --prefix frontend && tsup && cp src/index.html dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.ts"
   },
@@ -16,7 +16,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "prompts": "^2.4.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "open": "^10.1.0",
     "puppeteer": "^23.11.1"
   },
   "bin": {
@@ -27,6 +29,8 @@
     "type": "git"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/prompts": "^2.4.9",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",

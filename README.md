@@ -4,19 +4,19 @@
 
 ![mark](./img/mark.png)
 
-基于 [Puppeteer](https://github.com/puppeteer/puppeteer)。
-
-## 安装
+## 使用
 
 ```bash
 # 安装依赖
 npm install -g wechat-article-dl
 
-# 执行 `wx-dl [公众号文章链接]`
-wx-dl https://mp.weixin.qq.com/s/AnCv3WLmMGJPn5MAjqwC6g
+# 执行 `wx-dl`
+wx-dl
 ```
 
-执行完成后，会生成 `[root]/[公众号名]-[文章名].png`。
+会唤起系统默认浏览器并打开 `http://localhost:3000`，在页面上直接操作即可。
+
+执行完成后，生成的截图会出现在页面右侧。
 
 ![example](./img/example.png)
 
