@@ -30,8 +30,5 @@ npm run start
 npm run build
 ```
 
-## TODO
-
-- [ ] telegram 机器人
-- [ ] serverless
-- [ ] 处理文章中的视频
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/Cygra/wechat-article-dl.svg?variant=adaptive)](https://starchart.cc/Cygra/wechat-article-dl)
