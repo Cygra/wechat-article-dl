@@ -118,7 +118,7 @@ function App() {
                     </FormControl>
                     <SelectContent>
                       <SelectItem value="430">430px - 适合手机浏览</SelectItem>
-                      <SelectItem value="banana">
+                      <SelectItem value="1600">
                         1600px - 适合电脑浏览
                       </SelectItem>
                     </SelectContent>
